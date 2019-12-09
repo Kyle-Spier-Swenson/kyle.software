@@ -2,34 +2,22 @@
 
 ---
 
-### Category Name 1 
+### /tg/Station 13 
 
-[Project 1 Title](/sample_page)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+#### Master Controller (Game loop/timing logic) Redesign.
+Resign the system responsible for triggering internal processes to intelligently manage how long internal processes are allowed to run. Challenge mode: *Single threaded*
 
----
-[Project 2 Title](/pdf/sample_presentation.pdf)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+Dubbed "The death of lag" by our players.
 
 ---
-[Project 3 Title](http://example.com/)
-<img src="images/dummy_thumbnail.jpg?raw=true"/>
+#### /tg/Station Server Framework (v1-v2)
+Framework for managing a byond engine based game server in a production environment when backed by an authoritative git server.
 
----
-
-### Category Name 2
-
-- [Project 1 Title](http://example.com/)
-- [Project 2 Title](http://example.com/)
-- [Project 3 Title](http://example.com/)
-- [Project 4 Title](http://example.com/)
-- [Project 5 Title](http://example.com/)
-
----
-
-
+Handles compilation, staging, selective tree presistants (eg config, data), and updating the underlying game code without restarting the game server using blue/green symlinks such that the new code will seamlessly take effect next game round.
 
 
 ---
 <p style="font-size:11px">Page template forked from <a href="https://github.com/evanca/quick-portfolio">evanca</a></p>
 <!-- Remove above link if you don't want to attibute -->
+
+
