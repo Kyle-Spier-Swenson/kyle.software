@@ -1,8 +1,14 @@
-## Portfolio
+# Portfolio
 
 ---
 
-### /tg/Station 13 
+## /tg/Station 13 
+
+At the open source project /tg/Station 13, GitHub's most active open source video game (that was ranked 7th in number of comments), I am responsible for overseeing the technical operations for all our web properties, while also being the domain expert on the game engine and its proprietary language, database programming, and the various frameworks I've created to aid common development tasks.
+
+I revamped the scheduler that runs our game loop and all associated timed tasks such that players dubbed it "The death of lag"; Revamped deployment from a manual process involving manuallying compiling and copying of binaries on the production server to a operator initiated automated process utilizing blue-green deployments; Took a fine-tooth comb to clear out memory and cpu sinkholes; and authored a myriad of programmer QoL enhancements to the game's core framework.
+
+### /tg/Station 13 Projects:
 
 #### [Master Controller (Game loop/timing logic) Redesign.](/master_controller)
 Resign the system responsible for triggering internal processes to intelligently manage how long internal processes are allowed to run. Challenge mode: *Single threaded*
@@ -18,7 +24,7 @@ Handles compilation, staging, selective tree presistants (e/g: config, data), an
 ---
 #### [Extensive system for publishing game logs](/game_logs)
 
-My Head Admins approached me about publicizing a filtered version of our game round logs for various ends.
+My Head In-Game-Administrators approached me about publicizing a filtered version of our game round logs for various ends.
 
 I over engineered the system purely to avoid having to build a front end.
 
@@ -32,7 +38,7 @@ Simply extract a zip, run a batch file, and enable the database module in the ga
 
 No configuration. No bootstrapping. No 7-part install process.
 
-A second, included zip allows devs to reset their database by simply overriding the data folder with a clean but still bootstrapped copy of the schema.
+A second, included zip allows devs to reset their database by simply overwriting the data folder with a clean but still bootstrapped copy of the schema.
 
 ---
 #### Github webhook framework
@@ -40,13 +46,15 @@ Created the framework used for processing webhook events from github, Added inte
 
 * Discord announce of pr events.
 * In-game announce of pr events.
-* Generate changelog entries from specially formatted text in the pr body. (This change *significantly* increased engagement with the changelog system by open source contributors) 
+* Generate changelog entries from specially formatted text in the pr body. (This change *significantly* increased engagement with the changelog system by open source contributors)
+
+Further features were added by other contributors including auto-tagging based off of title, text, or what code directories were modified, as well as tracking features to fixes ratios for all contributors.
 
 ---
 #### Single Sign-on System
 Making users create a new account to engage with the wiki creates inertia and limits our contributor pool, especially if they already have a forum account. I decided this was unacceptable and made the wiki authenticate users to their forum account.
 
-The forum account system has become more of our primary account system.
+The forum account system has become our primary account system and how all admin tools authenticate users. 
 
 ---
 #### tgdb: A Player Database Front-End
